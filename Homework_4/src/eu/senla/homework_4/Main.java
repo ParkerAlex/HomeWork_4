@@ -30,10 +30,12 @@ public class Main {
 		 
 		 }
      }
-	
+	 
+	 System.out.println("MATRIX SIZE 10x10:");
 	 for(int i = 0; i < matrix.length; i++){
 		 for(int j = 0; j < matrix.length; j++){
-			 System.out.print(matrix[i][j] + " ");
+			 
+			 System.out.print("     " + matrix[i][j] + " ");
 		 }
 		 System.out.println();
      }
@@ -48,7 +50,7 @@ public class Main {
 		  
 		   diagonalMain[i] =  matrix[i][i];
 					  		      
-			System.out.print(diagonalMain[i] + " ");
+			System.out.print("DIAGONAL ¹1: " + diagonalMain[i] + " ");
 		 }
 	   System.out.println();
 	   
@@ -58,7 +60,7 @@ public class Main {
 	   for(int i = 0; i < matrix.length; i++){
 			 
 		   diagonalSide[i] =  matrix[i][matrix.length - i - 1];
-			System.out.print(diagonalSide[i] + " ");
+			System.out.print("DIAGONAL ¹2: " + diagonalSide[i] + " ");
 		 }
 	   System.out.println();
 	   System.out.println();
@@ -66,11 +68,10 @@ public class Main {
 	   System.out.println(diagonalSide == diagonalMain);
 	   
 	   if(diagonalMain == diagonalSide) {
-		   System.out.print("DIAGONALI RAVNI");
+		   System.out.println("DIAGONALI RAVNI");
 	   }else {
-		   System.out.print("DIAGONALI NERAVNI");
+		   System.out.println("DIAGONALI NERAVNI");
 	   }
-	   System.out.println();
 	   System.out.println();
 	   
 	   int z = diagonalMain.length + diagonalSide.length;
@@ -86,6 +87,8 @@ public class Main {
 		 }
 	   System.out.println();
 	   System.out.println();
+	   
+///////////////////////////////////////////PART-3/////////////////////////	 
 	   Character str = 0;
 	   String numberOnly = "";  
 	   
@@ -107,30 +110,33 @@ public class Main {
 	  	 System.out.println();
 		   System.out.println();
 
+///////////////////////////////////////////PART-4,5/////////////////////////	 
 	  	String number = "";
-	 	
-	  	 
+	  	double[] numberArray = new double [20];
+	  	
 	  	   for(int xy = 0; xy < z; xy++){
 		       str = diagonal[xy].charAt(0);
 		       if (Character.isDigit(str) == true) {
 		    	   
 		    	     number = diagonal[xy];
 		    	     double dNumber = Double.parseDouble(number);  
-		    	     
+		    	     double result;
 		    	     
 		    	    if (dNumber > 1.7) {
-		    	    	double result = Math.ceil(dNumber);
-		    	    	System.out.print(result  + "_");  
+		    	    	numberArray[xy] = Math.ceil(dNumber);
 		    	    }else {
-		    	    	double result = Math.floor(dNumber);
-		    	    	System.out.print(result  + "_");  
+		    	    	numberArray[xy] = Math.floor(dNumber);
 		    	    }
-
+		    	    System.out.print(numberArray[xy]  + "_");
 		       }
 		      
 	  	   }
 	  	   
+//	  	 String[] numberArray = new String [number.length()];
+//	  	for(int w = 0; w < w; w++){
+//	  		numberArray[w] = 
+//	  	}
   
 	}
 	     	
-	     }
+}
