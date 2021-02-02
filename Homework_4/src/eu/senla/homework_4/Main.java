@@ -29,75 +29,66 @@ public class Main {
 			 }
 		 
 		 }
-     }
+       }
 	 
-	 System.out.println("MATRIX SIZE 10x10:");
-	 for(int i = 0; i < matrix.length; i++){
-		 for(int j = 0; j < matrix.length; j++){
+			 System.out.println("MATRIX SIZE 10x10:");
+			 for(int i = 0; i < matrix.length; i++){
+				 for(int j = 0; j < matrix.length; j++){
+					 System.out.print("     " + matrix[i][j] + " ");
+				 }
+				 System.out.println();
+		     }
+			 System.out.println();
 			 
-			 System.out.print("     " + matrix[i][j] + " ");
-		 }
-		 System.out.println();
-     }
-	 System.out.println();
-	 
 ///////////////////////////////////////////PART-2/////////////////////////	 
 	 String[] diagonalMain = new String [matrix.length]; 
      int x = 0;
-     
-	 
-	   for(int i = 0; i < matrix.length; i++){
-		  
-		   diagonalMain[i] =  matrix[i][i];
-					  		      
-			System.out.print("DIAGONAL ¹1: " + diagonalMain[i] + " ");
-		 }
-	   System.out.println();
-	   
+	
+		   for(int i = 0; i < matrix.length; i++){  
+			    diagonalMain[i] =  matrix[i][i];			  		      
+				System.out.print("DIAGONAL ¹1: " + diagonalMain[i] + " ");
+			 }
+		         System.out.println();
+		   
 	   String[] diagonalSide = new String [matrix.length]; 
 	     int y = 0;
 			       
-	   for(int i = 0; i < matrix.length; i++){
-			 
-		   diagonalSide[i] =  matrix[i][matrix.length - i - 1];
-			System.out.print("DIAGONAL ¹2: " + diagonalSide[i] + " ");
-		 }
-	   System.out.println();
-	   System.out.println();
+		   for(int i = 0; i < matrix.length; i++){
+				 
+			   diagonalSide[i] =  matrix[i][matrix.length - i - 1];
+				System.out.print("DIAGONAL ¹2: " + diagonalSide[i] + " ");
+			 }
+				   System.out.println();
+				   System.out.println();
 	   
-	   System.out.println(diagonalSide == diagonalMain);
+				   System.out.println(diagonalSide == diagonalMain);
 	   
-	   if(diagonalMain == diagonalSide) {
-		   System.out.println("DIAGONALI RAVNI");
-	   }else {
-		   System.out.println("DIAGONALI NERAVNI");
-	   }
-	   System.out.println();
+			   if(diagonalMain == diagonalSide) {
+				   System.out.println("DIAGONALI RAVNI");
+			   }else {
+				   System.out.println("DIAGONALI NERAVNI");
+			   }
+			   System.out.println();
 	   
 	   int z = diagonalMain.length + diagonalSide.length;
- 
 	   String[] diagonal = new String [z];
 	   
-	   System.arraycopy (diagonalMain, 0, diagonal, 0, diagonalMain.length);
-	   System.arraycopy (diagonalSide, 0, diagonal, diagonalMain.length, diagonalSide.length);
+			   System.arraycopy (diagonalMain, 0, diagonal, 0, diagonalMain.length);
+			   System.arraycopy (diagonalSide, 0, diagonal, diagonalMain.length, diagonalSide.length);
 	   
-	   for(int xy = 0; xy < z; xy++){
-		  
-		   System.out.print(diagonal[xy] + " ");
-		 }
-	   System.out.println();
-	   System.out.println();
+		   for(int xy = 0; xy < z; xy++){
+			   System.out.print(diagonal[xy] + " ");
+			 }
+			   System.out.println();
+			   System.out.println();
 	   
 ///////////////////////////////////////////PART-3/////////////////////////	 
 	   Character str = 0;
 	   String numberOnly = "";  
 	   
-	   
-	  
 	  	   for(int xy = 0; xy < z; xy++){
 		       str = diagonal[xy].charAt(0);
-		       
-		      
+      
 		       
 		       if (Character.isLetter(str) == true) {
 		    	   StringBuffer strBuffer = new StringBuffer(diagonal[xy]);
@@ -107,8 +98,8 @@ public class Main {
 		    	  
 		       }	       
 	  	   }
-	  	 System.out.println();
-		   System.out.println();
+			  	   System.out.println();
+				   System.out.println();
 
 ///////////////////////////////////////////PART-4,5/////////////////////////	 
 	  	String number = "";
@@ -130,13 +121,8 @@ public class Main {
 		    	    System.out.print(numberArray[xy]  + "_");
 		       }
 		      
-	  	   }
-	  	   
-//	  	 String[] numberArray = new String [number.length()];
-//	  	for(int w = 0; w < w; w++){
-//	  		numberArray[w] = 
-//	  	}
-  
+	  	    }
+
 	}
 	     	
 }
